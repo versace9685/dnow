@@ -1,0 +1,20 @@
+{
+	"noticia1":{
+		"titulo":"Tráfico",
+		"subtitulo":"Siniestralidad en la N-121-A",
+		"descripcion":"Una vecina de Urdiáin de 23 años resultó herida grave este jueves en un accidente de tráfico en la N-121-A.<br>La joven, que viajaba en un Peugeot 206, colisionó frontolateralmente contra un camión en el kilómetro 37 de la vía, cerca de Oronoz Mugaire, por causas que investiga la Guardia Civil.<br>A consecuencia del siniestro, ocurrido a las 14.50 horas del jueves, el vehículo de la herida quedó encajonado entre el camión y el guardarraíl, quedando atrapada la joven en el interior del coche. Los bomberos de Oronoz se encargaron de desatraparla. Después, fue trasladada al Complejo Hospitalario de Navarra con lesiones en las piernas.",
+		"keyword":"trafico"
+	},
+	"noticia2":{
+		"titulo":"Fútbol",
+		"subtitulo":"Tito Vilanova es ingresado de gravedad",
+		"descripcion":"El exentrenador barcelonista Francesc 'Tito' Vilanova se encuentra hospitalizado después de que la pasada noche se sometiera a una operación en el centro hospitalario Quirón de Barcelona relacionada con el cáncer en la glándula parótida que le fue detectado en noviembre de 2011.<br>El que fue la temporada pasada entrenador del FC Barcelona ha sido intervenido de una obstrucción en el estómago, que le impide la ingesta de alimentos.<br>Desde el club barcelonista han solicitado 'el máximo respeto a la privacidad' de Vilanova, tal y como el propio entrenador solicitó durante una de sus últimas comparecencias, en la que señaló que pese a tratarse de una persona pública su enfermedad pertenecía al ámbito estrictamente privado. ",
+		"keyword":"futbol"
+	},
+	"noticia3":{
+		"titulo":"Running",
+		"subtitulo":"Las claves de la 'nueva' Behobia",
+		"descripcion":"Sebastián celebrará el próximo 9 de noviembre sus bodas de oro. Cincuenta años y cincuenta carreras que han convertido a la cita guipuzcoana en una de los grandes referencias del calendario para muchos corredores populares, entre ellos cientos de navarros.<br>Este año el Fortuna, organizador de la carrera, ha decidido probar un itinerario nuevo después de una larga y meditada reflexión. Un recorrido urbano que favorecerá el ambiente y dejará de bloquear zonas como Lezo, Trintxerpe o Bidebieta. No será un cambio definitivo, pero el club ha pensado en la edición 50ª como momento perfecto para experimentar.",
+		"keyword":"running"
+	}
+}
