@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DNow</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="jquery.mobile-1.4.2.css"/>
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script src="jquery.mobile-1.4.2.js"></script>
+
+    <!--<script>
+        //El funcionamiento de esta función está explicado en http://junihh.com/capturar-las-variables-pasadas-por-url-con-javascript
+        jQuery(function($) {
+            //Esta función es el script que da forma a los twits y flikr y todo eso...
+            (function(a){var b="embedly-platform",c="script";if(!a.getElementById(b)){var d=a.createElement(c);d.id=b;d.async=true;d.src=("https:"===document.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";var e=document.getElementsByTagName(c)[0];e.parentNode.insertBefore(d,e)}})(document);
+            //...y acaba aquí.
+            var src = String( window.location.href ).split('?')[1];
+            var vrs = src.split('&');
+            var hilo="";
+            var infocabecera="";
+            
+            for (var x = 0, c = vrs.length; x < c; x++) {
+                if (vrs[x].indexOf('hilo') != -1) {
+                    hilo=decodeURI( vrs[x].split('=')[1] );
+                    break;
+                };
+            };
+            var cabecera = $("#cabecera");
+            var contenido = $("#content");
+            jQuery.getJSON("http://127.0.0.1/twitts.json", function(data) {
+                jQuery.each(data, function(key, value) {
+                    if (value.keyword==hilo) {
+                        infocabecera='<h3 class="nomargin">'+value.titulo+'</h3><p class="italic nomargin">'+value.subtitulo+'</p>';
+                        contenido.append('<div class="bloquenoticia">'+value.twit+'</div>');
+                    }
+                    contenido.trigger('create');
+                });
+                cabecera.append(infocabecera);
+                cabecera.trigger('create');
+            });
+        });
+    </script>-->
+</head>
+<body>
+	
+	<nav class="ui-responsive headernoticia">
+        ##cabecera##
+		<!--<div id="cabecera"></div>-->
+        <button onclick="window.history.back()" type="button" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all botonatras">No text</button>
+	</nav>
+    <div id="content">##content##</div>
+
+</body>
+</html>

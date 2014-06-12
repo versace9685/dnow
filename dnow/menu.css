@@ -1,0 +1,40 @@
+#menu { 
+	width: 100;
+}
+
+#menu li {
+	position: relative;
+}
+
+#menu ul ul {
+	position: relative;
+	top: 0;
+	top: 100%;
+	width: 400px;
+}
+
+div#menu ul ul {
+	display: none;
+}
+
+div#menu ul li:hover ul {
+	display: block;
+}
+
+#menu {
+	text-align: left;
+	width: 100%;
+}
+
+#primero {
+	background-color: #000;
+	color: #fff;
+	width: 100%;
+}
+
+#segundo {
+	background-color: #fff;
+	color: #000;
+	width: 100%;
+}
+

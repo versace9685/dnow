@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DNow</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+	<link rel="stylesheet" href="menu.css" />
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="jquery.mobile-1.4.2.js"></script>
+	<script>
+		function hora(){
+			var fecha=new Date();
+			var horas=fecha.getHours();
+			var minutos=":" + fecha.getMinutes();
+			var segundos=fecha.getSeconds();
+			var dia=fecha.getDay();
+			var mes=fecha.getMonth();
+			var numdia=fecha.getDate();
+			if (fecha.getMinutes()<10) {
+				minutos=":0"+fecha.getMinutes();
+			}
+			switch(dia) {
+				case 0:
+					nombredia="Domingo";
+					break;
+				case 1:
+					nombredia="Lunes";
+					break;
+				case 2:
+					nombredia="Martes";
+					break;
+				case 3:
+					nombredia="Miércoles";
+					break;
+				case 4:
+					nombredia="Jueves";
+					break;
+				case 5:
+					nombredia="Viernes";
+					break;
+				case 6:
+					nombredia="Sábado";
+					break;
+			}
+			switch(mes) {
+				case 0:
+					nombremes="Enero";
+					break;
+				case 1:
+					nombremes="Febrero";
+					break;
+				case 2:
+					nombremes="Marzo";
+					break;
+				case 3:
+					nombremes="Abril";
+					break;
+				case 4:
+					nombremes="Mayo";
+					break;
+				case 5:
+					nombremes="Junio";
+					break;
+				case 6:
+					nombremes="Julio";
+					break;
+				case 7:
+					nombremes="Agosto";
+					break;
+				case 8:
+					nombremes="Septiembre";
+					break;
+				case 9:
+					nombremes="Octubre";
+					break;
+				case 10:
+					nombremes="Noviembre";
+					break;
+				case 11:
+					nombremes="Diciembre";
+					break;
+			}
+			document.getElementById('horas').innerHTML=horas;
+			document.getElementById('minutos').innerHTML=minutos;
+			document.getElementById('fecha').innerHTML=nombredia+", "+numdia+" de "+nombremes;
+		}
+		function llamarHora(){
+			hora();
+		setTimeout("llamarHora()",1000);
+		}
+	</script>
+	<script type="text/javascript">
+		function tiempo(ciudad) {
+			switch(ciudad) {
+				case 0:
+					tiempociudad='<iframe id="TTF_tBjgrhYxtEE9d99AMAVkkk11E9aABAE" src="http:\/\/www.tutiempo.net\/V4\/widget\/tt_NXx8MzgyNjI2fG58bnxufDM0NDR8MjB8OXwyfDF8MXwwfDI1fG58bnxufHx8fHxGRkZGRkZ8NTB8M3wzOXw1MHwxMTJ8MTh8NTJ8MnwxNTF8NTB8MjB8MjZ8MTN8MTR8MjJ8NDF8MjZ8Q2l8Mnw%2C" frameborder="0" scrolling="no" width="100%" height="100%" allowtransparency="allowtransparency" style="overflow:hidden;" class="bloquetiempociudad"><\/iframe>';
+					break;
+				case 1:
+					tiempociudad='<iframe id="TTF_RxtAbhYxtcaa8a9UMfV111kE1tlUBUB" src="http:\/\/www.tutiempo.net\/V4\/widget\/tt_NXx8MzgyNjI2fG58bnxufDM3Njh8MjB8OXwyfDF8MXwwfDI1fG58bnxufHx8fHxGRkZGRkZ8NTB8M3wzOXw1MHwxMTJ8MTh8NTJ8MnwxNTF8NTB8MjB8MjZ8MTN8MTR8MjJ8NDF8MjZ8Q0J8Mnw%2C" frameborder="0" scrolling="no" width="100%" height="100%" allowtransparency="allowtransparency" style="overflow:hidden;" class="bloquetiempociudad"><\/iframe>'/*<div id=\"TT_vhjgLBthtI2cdcBA1fV11EEEk9aAcAh\"><h3><a href=\"http://www.tutiempo.net\">el tiempo</a></h3></div>
+<script type=\"text/javascript\" src=\"http://www.tutiempo.net/widget/eltiempo_vhjgLBthtI2cdcBA1fV11EEEk9aAcAh\"><//script>";*/
+					break;
+				case 2:
+					tiempociudad='<iframe id="TTF_tBngLxYBYnScr9aK1fq1E1kEEtaK9Kl" src="http:\/\/www.tutiempo.net\/V4\/widget\/tt_NXx8MzgyNjI2fG58bnxufDcxODN8MjB8OXwyfDF8MXwwfDI1fG58bnxufHx8fHxGRkZGRkZ8NTB8M3wzOXw1MHwxMTJ8MTh8NTJ8MnwxNTF8NTB8MjB8MjZ8MTN8MTR8MjJ8NDF8MjZ8eXd8Mnw%2C" frameborder="0" scrolling="no" width="100%" height="100%" allowtransparency="allowtransparency" style="overflow:hidden;" class="bloquetiempociudad"><\/iframe>'/*"<div id=\"TT_vhjgLxdxYdIBhB9A1Aq1kk111taABA1\"><h2><a href=\"http://www.tutiempo.net\">Pronósticos del tiempo</a></h2></div>
+<script type=\"text/javascript\" src=\"http://www.tutiempo.net/widget/eltiempo_vhjgLxdxYdIBhB9A1Aq1kk111taABA1\"><//script>";*/
+					break;
+			} 
+			
+			document.getElementById('mostrartiempo').innerHTML=tiempociudad;
+			
+		}
+		function llamarTiempo(ciudad) {
+			tiempo(ciudad);
+			setTimeout("llamarTiempo", 3600000)
+		}
+	</script>
+	<script>
+		var audio = new Audio('http://gabilacosta.eshost.es/audioprueba.mp3');
+		function podcast() {
+			if (audio.paused) {
+				audio.play();
+			}
+			else {
+				audio.pause();
+			}
+		}
+	</script>
+	<script>
+		jQuery(function($) {
+		  var columns = $("#hilos");
+		  var i=0;
+		  var tema="";
+		  jQuery.getJSON("http://gabilacosta.eshost.es/hilos.json", function(data) {
+
+			  jQuery.each(data, function(key, value) {
+
+			    if (i%2==0) {
+			    	tema="b";
+			    }
+			    else {
+			    	tema="a";
+			    }
+			    columns.append('<div data-role="collapsible" data-theme="'+tema+'" data-content-theme="'+tema+'"><h3>'+value.titulo+'<p style="font-size: 12px; font-weight: normal;">'+value.subtitulo+'</p></h3><p>'+value.descripcion+'</p><a style="background-color: #DF7401" class="suscribe ui-btn ui-icon-eye ui-btn-icon-left" type="button" href="http://gabilacosta.eshost.es/controlador.php?hilo='+value.keyword+'" target="_self">Ver noticia</a><a style="background-color: #a00" class="suscribe ui-btn ui-icon-check ui-btn-icon-left" type="button" href="http://gabilacosta.eshost.es/controlador.php?suscribe='+value.keyword+'" target="_self">Suscríbete</a><a href="#'+value.keyword+'" data-rel="popup" data-position-to="window" style="background-color: #1a2" class="suscribe ui-btn ui-icon-comment ui-btn-icon-left" data-transition="pop">Comentar</a><div data-role="popup" id="'+value.keyword+'" data-theme="a" data-overlay-theme="b" class="ui-corner-all"><form method="post" action="http://gabilacosta.eshost.es/controlador.php"><div style="padding:10px 20px;"><h3>Añade un comentario</h3><label for="areacomentario" class="ui-hidden-accessible">Comentario:</label><textarea autofocus cols="5" rows="5" name="comentario" id="areacomentario" value="" placeholder="Comentario..." data-theme="a" type="text"></textarea><input type="hidden" name="keyword" value="'+value.keyword+'"><button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="window.location.href=\'http://gabilacosta.eshost.es/dnow\'">Comentar</button></div></form></div>');
+			    columns.trigger('create');
+			    i++;
+			  });  
+
+			});
+		});
+	</script>
+</head>
+<body onload="llamarHora()">
+
+<!-- Start of first page -->
+<div data-role="page" class="fondo">
+
+	<div data-role="header" style="min-height: 25%" class="ui-grid-a ui-responsive cabecera">
+		<div class="ui-block-a bloquefechahora ui-responsive">
+			<div id="fecha" class="fecha">
+				Miércoles, 4 de Marzo
+			</div>
+			<div class="hora ui-responsive">
+				<span id='horas'></span><span id='minutos' class="minutos"></span>
+			</div>
+		</div>
+		<div class="ui-block-b bloquetiempo" style="background-color: #088A85">
+			<div style="background-color: #088A85; color: #fff; font-size: 10px; box-shadow: none;" class="ciudad">
+				<select data-native-menu="false" style="background-color: #088A85; color: #fff; font-size: 10px; box-shadow: none;" onchange="llamarTiempo(selectedIndex);">
+				    <option style="background-color: #088A85; color: #fff; font-size: 10px; box-shadow: none;" value="Pamplona" >Pamplona</option>
+				    <option value="Madrid" style="background-color: #088A85; color: #fff; font-size: 10px; box-shadow: none;" >Madrid</option>
+				    <option value="Barcelona" style="background-color: #088A85; color: #fff; font-size: 10px; box-shadow: none;" >Barcelona</option>
+				</select>
+			</div>
+			<div id="mostrartiempo">
+				<iframe id="TTF_tBjgrhYxtEE9d99AMAVkkk11E9aABAE" src="http://www.tutiempo.net/V4/widget/tt_NXx8MzgyNjI2fG58bnxufDM0NDR8MjB8OXwyfDF8MXwwfDI1fG58bnxufHx8fHxGRkZGRkZ8NTB8M3wzOXw1MHwxMTJ8MTh8NTJ8MnwxNTF8NTB8MjB8MjZ8MTN8MTR8MjJ8NDF8MjZ8Q2l8Mnw%2C" frameborder="0" scrolling="no" width="100%" height="100%" allowtransparency="allowtransparency" style="overflow:hidden;" class="bloquetiempociudad"></iframe>
+			</div>
+		</div>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content contenido" style="min-height: 50%">
+		<div data-role="collapsibleset" data-theme="b" data-content-theme="b" data-corners="false" data-iconpos="right">
+			<div id="hilos"></div>
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" class="ui-grid-b ui-responsive menuinferior" style="min-height: 25%">
+		<div class="ui-block-a">
+			<a href="#" onclick="window.location.href='http://gabilacosta.eshost.es/controlador.php?alerts=alertas'" class="alertas ui-shadow ui-btn ui-corner-all ui-btn-icon-top ui-icon-alert" style="background-color: #DF0101">Alertas</a>
+		</div>
+		<!--<div class="ui-block-a">
+			<a href="#" onclick="window.location.href='http://www.diariodenavarra.es'" class="alertas ui-shadow ui-btn ui-corner-all ui-btn-icon-top ui-icon-action" style="background-color: #DF0101">Ir a la web</a>
+		</div>-->
+    	<div class="ui-block-b">
+    		<a href="#" class="podcast ui-shadow ui-btn ui-corner-all ui-btn-icon-top ui-icon-audio" style="background-color: #04B404" onclick="podcast();">Podcast</a>
+    	</div>
+    	<div class="ui-block-c">
+    		<a href="#popupFeedback" data-rel="popup" data-position-to="window" class="configuracion ui-btn ui-corner-all ui-shadow ui-icon-recycle ui-btn-icon-top" data-transition="pop" style="background-color: #08f">Feedback</a>
+    		<div data-role="popup" id="popupFeedback" data-theme="a" data-overlay-theme="b" class="ui-corner-all">
+    			<form action="http://gabilacosta.eshost.es/controlador.php?feedback=si" method="post">
+			        <div style="padding:10px 20px; text-align:center;">
+			            <h3>Ayúdenos a mejorar la aplicación escribiendo sugerencias</h3>
+			            <label for="feedback" class="ui-hidden-accessible">Comentario:</label>
+			            <textarea autofocus cols="5" rows="5" name="comentariofeedback" id="feedback" value="" placeholder="Escriba aquí..." data-theme="a" type="text"></textarea>
+			            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="window.location.href='http://gabilacosta.eshost.es/dnow'">Enviar</button>
+			        </div>
+    			</form>
+    		</div>
+    	</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>

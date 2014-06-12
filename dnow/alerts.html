@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DNow</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="http://gabilacosta.eshost.es/dnow/jquery.mobile-1.4.2.css"/>
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script src="http://gabilacosta.eshost.es/dnow/jquery.mobile-1.4.2.js"></script>
+</head>
+<body>
+	<nav class="ui-responsive headernoticia">
+		<h3 class="nomargin">##titulo##</h3>
+        <button onclick="window.history.back()" type="button" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all botonatrasalerts">No text</button> 
+	</nav>
+    <form class="sliderderecha" method="post" action="http://gabilacosta.eshost.es/alertas.php">
+	   ##content##
+       <input type="submit" value="Enviar" class="botonenviar" style="background-color: #000;">
+    </form>
+</body>
+</html>
